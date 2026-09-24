@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dane pamięci RAM</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      margin: 40px;
+    }
+
+    .tabela {
+      width: 720px;
+      border: 4px solid red;
+    }
+
+    .title {
+      margin: 0;
+      padding: 6px;
+      text-align: center;
+      font-size: 24px;
+      background: white;
+    }
+
+    /* każdy ul to siatka z 6 kolumnami */
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 2fr 1.6fr 1fr 1.3fr 1fr 1.3fr;
+      border-left: 1px solid navy;
+      border-top: 1px solid navy;
+    }
+
+    li {
+      border-right: 1px solid navy;
+      border-bottom: 1px solid navy;
+      padding: 4px 6px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* nagłówek */
+    .head li {
+      background: navy;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      justify-content: center;
+    }
+
+    /* dane */
+    .body li { min-height: 44px; font-size: 18px; }
+    .model  { color: #8b1a1a; }
+    .speed  { color: #333; justify-content: center; }
+    .mem    { color: #333; justify-content: flex-end; }
+    .gen    { color: #1a1a5e; font-family: Arial, sans-serif; font-size: 14px !important; justify-content: center; }
+    .price  { color: #8b1a1a; font-size: 16px !important; }
+
+    .body li.status {
+      background: white;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+      justify-content: center;
+    }
+    .span2 { grid-row: span 2; }
+
+    /* kolory wierszy */
+    .r1 { background: #ecd9ea; }
+    .r2 { background: #c7e3ef; }
+    .r3 { background: #cdeedd; }
+    .r4 { background: #f2edc9; }
+    .r5 { background: #dcd7f0; }
+    .r6 { background: #f8dccb; }
+
+    /* stopka */
+    .foot { grid-template-columns: 1fr; }
+    .foot li {
+      background: navy;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="tabela">
+
+  <h2 class="title">Dane pamięci RAM – Tkachuk Mykhailo 1p gr2</h2>
+
+  <ul class="head">
+    <li>Model</li>
+    <li>Prędkość</li>
+    <li>Pamięć</li>
+    <li>Generacja</li>
+    <li>Cena</li>
+    <li>Status</li>
+  </ul>
+
+  <ul class="body">
+    <!-- wiersz 1 -->
+    <li class="r1 model">Corsair Vengeance</li>
+    <li class="r1 speed">3600 MHz</li>
+    <li class="r1 mem">8 GB</li>
+    <li class="r1 gen">DDR4</li>
+    <li class="r1 price">150 zł</li>
+    <li class="status span2">Stary</li>
+
+    <!-- wiersz 2 (status jest połączony z wierszem 1) -->
+    <li class="r2 model">Kingston Fury</li>
+    <li class="r2 speed">3600 MHz</li>
+    <li class="r2 mem">16 GB</li>
+    <li class="r2 gen">DDR4</li>
+    <li class="r2 price">280 zł</li>
+
+    <!-- wiersz 3 -->
+    <li class="r3 model">G.Skill Trident Z</li>
+    <li class="r3 speed">4000 MHz</li>
+    <li class="r3 mem">32 GB</li>
+    <li class="r3 gen">DDR4</li>
+    <li class="r3 price">520 zł</li>
+    <li class="status">Nowy</li>
+
+    <!-- wiersz 4 -->
+    <li class="r4 model">Crucial Ballistix</li>
+    <li class="r4 speed">3000 MHz</li>
+    <li class="r4 mem">16 GB</li>
+    <li class="r4 gen">DDR4</li>
+    <li class="r4 price">250 zł</li>
+    <li class="status">Stary</li>
+
+    <!-- wiersz 5 -->
+    <li class="r5 model">Patriot Viper Steel</li>
+    <li class="r5 speed">3600 MHz</li>
+    <li class="r5 mem">8 GB</li>
+    <li class="r5 gen">DDR4</li>
+    <li class="r5 price">140 zł</li>
+    <li class="status">Stary</li>
+
+    <!-- wiersz 6 -->
+    <li class="r6 model">HyperX Predator</li>
+    <li class="r6 speed">3200 MHz</li>
+    <li class="r6 mem">16 GB</li>
+    <li class="r6 gen">DDR4</li>
+    <li class="r6 price">320 zł</li>
+    <li class="status">Nowy</li>
+  </ul>
+
+  <ul class="foot">
+    <li>Dane pamięci RAM</li>
+  </ul>
+
+</div>
+
+</body>
+</html>
